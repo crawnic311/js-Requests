@@ -139,12 +139,15 @@ document.querySelector('#repeat-button').addEventListener('click', repeatMyParam
 
 // CODE HERE
 
-function quarryTest() {
+function queryTest() {
 
 let quarryArr = [1, 2, 3, 4, 5]
 axios.get('http://localhost:3000/query-test?myquery=noodles and sauce-quary&peanutButter=Ruston-Kelly%27')
 .then(({data}) => console.log(data))
 }
+
+let queryButton = document.getElementById('query-button')
+queryButton.addEventListener('click', queryTest)
 
 
 
