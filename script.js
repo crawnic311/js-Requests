@@ -40,7 +40,12 @@ sayHelloButton.addEventListener('mouseover', changeSayHelloButtonBackgroundColor
 */
 
 // CODE HERE
+function revertSayHelloButtonBackgroundColor(event) {
+    sayHelloButton.style.backgroundColor = '#EFEFEF'
+    sayHelloButton.style.color = 'black'
+}
 
+sayHelloButton.addEventListener('mouseout', revertSayHelloButtonBackgroundColor)
 
 // PROBLEM 4
 /*
