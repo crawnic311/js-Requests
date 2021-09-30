@@ -208,3 +208,27 @@ queryButton.addEventListener('click', queryTest)
 */
 
 // CODE HERE 
+
+function createFood(event) {
+    let foodInput = document.querySelector('input').textContent
+
+    let body = {
+        newFood: foodInput
+    }
+
+    axios.post('http://localhost:3000/food', body)
+    .then(function (res) {
+        console.log(res.data)
+        let newFood = document.createElement('p')
+        newFood.textContent = res.data
+        let body2 = document.querySelector('body')
+        body2.appendChild(newFood)
+    })
+
+
+}
+
+
+
+let addButton = document.getElementById('add-list')
+addButton.addEventListener('click', createFood())
