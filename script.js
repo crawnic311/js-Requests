@@ -105,9 +105,13 @@ document.getElementById('animals-button').addEventListener('click', ohMy)
 
 const repeatMyParam = () => {
     axios.get('http://localhost:3000/repeat/water')
-    .then((res) => {
+    .then(function (res) {
         console.log(res.data)
+        let repeat = document.getElementById('repeat-text')
+        repeat.textContent = res.data
+        repeat.style.display = 'block'
     })
+    
 }
 
 document.querySelector('#repeat-button').addEventListener('click', repeatMyParam)
@@ -134,6 +138,13 @@ document.querySelector('#repeat-button').addEventListener('click', repeatMyParam
 */
 
 // CODE HERE
+
+function quarryTest() {
+
+let quarryArr = [1, 2, 3, 4, 5]
+axios.get('http://localhost:3000/query-test?myquery=noodles and sauce-quary&peanutButter=Ruston-Kelly%27')
+.then(({data}) => console.log(data))
+}
 
 
 
