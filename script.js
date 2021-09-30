@@ -63,10 +63,11 @@ const sayHello = () => {
         helloText.textContent = res.data;
     })
 }
+
 // DO NOT EDIT FUNCTION
 
 // CODE HERE
-
+sayHelloButton.addEventListener('click', sayHello)
 
 // PROBLEM 5 
 /*
