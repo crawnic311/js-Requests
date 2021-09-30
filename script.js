@@ -10,7 +10,8 @@
 */
 
 // CODE HERE
-
+var sayHelloButton = document.querySelector('#say-hello-button')
+//console.log(sayHelloButton)
 
 // PROBLEM 2
 /*
