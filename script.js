@@ -81,7 +81,10 @@ sayHelloButton.addEventListener('click', sayHello)
 */ 
 
 const ohMy = () => {
-    // YOUR CODE HERE
+    axios.get('http://localhost:3000/animals')
+    .then((res) => {
+        console.log(res.data)
+    })
 }
 
 document.getElementById('animals-button').addEventListener('click', ohMy)
