@@ -146,8 +146,8 @@ document.querySelector('#repeat-button').addEventListener('click', repeatMyParam
 
 function queryTest() {
 
-let quarryArr = [1, 2, 3, 4, 5]
-axios.get('http://localhost:3000/query-test?myquery=noodles and sauce-quary&peanutButter=Ruston-Kelly%27')
+
+axios.get('http://localhost:3000/query-test?quarryArr=1, 2, 3, 4, 5')
 .then(({data}) => console.log(data))
 }
 
@@ -174,8 +174,10 @@ queryButton.addEventListener('click', queryTest)
     In the function that you wrote for Problem 8, change the URL to test a couple different scenarios. 
 
     1: Send no queries on the URL -- what happened? 
+    //The console tells me I sent and empty query!
 
     2: Send more than 1 query on the URL -- what happened? 
+    //The console tells me I sent more than 1 query!
 */
 
 // Edit code in Problem 8
