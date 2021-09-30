@@ -21,6 +21,13 @@ var sayHelloButton = document.querySelector('#say-hello-button')
 */
 
 // CODE HERE
+function changeSayHelloButtonBackgroundColor(event) {
+    sayHelloButton.style.backgroundColor = 'black'
+    sayHelloButton.style.color = 'white'
+}
+
+sayHelloButton.addEventListener('mouseover', changeSayHelloButtonBackgroundColor)
+
 
 
 // PROBLEM 3
